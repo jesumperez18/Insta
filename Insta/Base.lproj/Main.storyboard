@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-Np-vJW">
-                                <rect key="frame" x="52" y="112" width="254" height="30"/>
+                                <rect key="frame" x="61" y="198" width="254" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKI-Tk-udV">
-                                <rect key="frame" x="52" y="206" width="254" height="30"/>
+                                <rect key="frame" x="61" y="252" width="254" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,11 +49,16 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jO6-nH-wPa"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Insta" translatesAutoresizingMaskIntoConstraints="NO" id="kP4-xE-1TL">
+                                <rect key="frame" x="143" y="83" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="instaImg" destination="kP4-xE-1TL" id="2c1-I4-T78"/>
                         <outlet property="passwordField" destination="VKI-Tk-udV" id="Dvg-sy-Smw"/>
                         <outlet property="usernameField" destination="sDv-Np-vJW" id="pNR-84-9SP"/>
                         <segue destination="RKx-WL-Nv1" kind="presentation" identifier="loginSegue" id="W2U-jf-AqH"/>
@@ -61,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-197"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="-197.45127436281859"/>
         </scene>
         <!--Logout View Controller-->
         <scene sceneID="46F-Sa-i2V">
@@ -149,10 +154,10 @@
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wA6-t1-lEq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mcx-I4-mJA">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mcx-I4-mJA">
+                                <rect key="frame" x="256" y="9.5" width="103" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Compose"/>
+                                <state key="normal" image="insta_camera_btn"/>
                                 <connections>
                                     <segue destination="ucd-JT-Rv5" kind="presentation" identifier="onCompose" id="8dU-gJ-1iJ"/>
                                 </connections>
@@ -282,6 +287,10 @@
             <point key="canvasLocation" x="881" y="-195"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Insta" width="720" height="864"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VoZ-mN-PUn"/>
     </inferredMetricsTieBreakers>
